@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 /// APP INFO CONSTANTS ///
 ///
-const String APP_NAME = "Flutter Dating App Admin Panel";
-const Color APP_PRIMARY_COLOR = Colors.red;
-const Color APP_ACCENT_COLOR = Colors.redAccent;
-const int APP_VERSION_NUMBER = 1;
-const String APP_VERSION_NAME = "v.1.0.0";
+const String APP_NAME = "fBoys";
+const Color APP_PRIMARY_COLOR = Colors.pink;
+const Color APP_ACCENT_COLOR = Colors.pinkAccent;
+const Color APP_PRIMARY_COLOR_DARK = Color(0xff013245);
+const int APP_VERSION_NUMBER = 2;
+const String APP_VERSION_NAME = "v1.0.2";
 
 /// FIREBASE MESSAGING TOPIC
 const NOTIFY_USERS = "NOTIFY_USERS";
@@ -32,7 +33,7 @@ const String ADMIN_PASSWORD = "admin_password";
 /// DATABASE COLLECTION NAMES USED IN APP
 ///
 const String C_APP_INFO = "AppInfo";
-const String C_USERS = "Users";
+const String C_USERS = "users";
 const String C_FLAGGED_USERS = "FlaggedUsers";
 
 /// DATABASE FIELDS FOR USER COLLECTION  ///
@@ -67,6 +68,7 @@ const String USER_TOTAL_DISLIKED = "user_total_disliked";
 const String USER_MIN_AGE = "user_min_age";
 const String USER_MAX_AGE = "user_max_age";
 const String USER_MAX_DISTANCE = "user_max_distance";
+const String USER_SHOW_ME = "user_show_me";
 
 /// DATABASE FIELDS FOR FlaggedUsers COLLECTION  ///
 ///
