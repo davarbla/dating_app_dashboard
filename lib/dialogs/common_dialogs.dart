@@ -143,33 +143,34 @@ void _buildDialog(
   showDialog(
       context: context,
       barrierDismissible: false,
-      child: AlertDialog(
-        shape: defaultCardBorder(),
-        title: Row(
-          children: [
-            _icon,
-            SizedBox(width: 10),
-            Expanded(child: Text(_title, style: TextStyle(fontSize: 22)))
-          ],
-        ),
-        content: Text(
-          message,
-          style: TextStyle(fontSize: 18),
-        ),
-        actions: [
-          /// Negative button
-          negativeAction == null
-              ? Container(width: 0, height: 0)
-              : FlatButton(
-                  onPressed: negativeAction,
-                  child: Text(negativeText ?? "CANCEL",
-                      style: TextStyle(fontSize: 18, color: Colors.grey))),
+      builder: (context) {
+        AlertDialog(
+          shape: defaultCardBorder(),
+          title: Row(
+            children: [
+              _icon,
+              SizedBox(width: 10),
+              Expanded(child: Text(_title, style: TextStyle(fontSize: 22)))
+            ],
+          ),
+          content: Text(
+            message,
+            style: TextStyle(fontSize: 18),
+          ),
+          actions: [
+            /// Negative button
+            negativeAction == null
+                ? Container(width: 0, height: 0)
+                : FlatButton(
+                    onPressed: negativeAction,
+                    child: Text(negativeText ?? "CANCEL",
+                        style: TextStyle(fontSize: 18, color: Colors.grey))),
 
-          /// Positive button
-          FlatButton(
-              onPressed: positiveAction ?? () => Navigator.of(context).pop(),
-              child: Text(positiveText ?? "OK",
-                  style: _textStyle)),
-        ],
-      ));
+            /// Positive button
+            FlatButton(
+                onPressed: positiveAction ?? () => Navigator.of(context).pop(),
+                child: Text(positiveText ?? "OK", style: _textStyle)),
+          ],
+        );
+      });
 }
